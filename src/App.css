@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+:root {
+  --dark-bg-color: #121212;
+  --levelOne-bg-color: rgba(255, 255, 255, 0.05);
+  --levelTwo-bg-color: hsla(0, 0%, 100%, 0.078);
+  --strokes-color: rgba(255, 255, 255, 0.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.graphic {
+  background-color: var(--levelOne-bg-color);
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chartHeader {
+  font-size: 0.6rem;
+  background-color: var(--levelTwo-bg-color);
+  width: 100%;
+  padding: 12px 22px;
+  color: #fff;
+  margin-bottom: 2px;
+  margin-top: 50px;
+}
+
+.chartFooter {
+  font-size: 0.7rem;
+  font-weight: 300;
+  background-color: var(--levelTwo-bg-color);
+  width: 100%;
+  color: #fff;
+  padding: 50px;
+}
+
+.tick line {
+  stroke: var(--strokes-color);
+}
+
+.tick text {
+  font-size: 0.6em;
+  font-weight: 200;
+  fill: var(--strokes-color);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.axis-lable {
+  color: var(--strokes-color);
+  font-weight: 200;
+}
+
+.Dropdown-root {
+  width: 200px;
+  font-size: 0.6em;
+  margin-right: 22px;
+}
+
+.chartDropdown {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 12px 22px;
+  align-items: baseline;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown-label {
+  margin-right: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 
+Bubblemap
+*/
+g.district {
+  fill: #303030;
+}
+
+path.interiors {
+  stroke: var(--strokes-color);
 }
